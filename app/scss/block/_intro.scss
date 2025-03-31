@@ -1,0 +1,59 @@
+//*mixins*//
+@import "./mixin.scss";
+
+.intro {
+   &__row {
+      background-color: $white;
+      border-radius: 1rem;
+      padding: 2rem 1rem;
+      &--title {
+         margin-bottom: 0.5rem;
+         h1 {
+            font-size: 3rem;
+            font-weight: 400;
+            color: $danger;
+         }
+      }
+      &--suptitle {
+         margin-bottom: 2rem;
+         h2 {
+            font-size: 2.4rem;
+            font-weight: 400;
+            color: $text-color;
+         }
+      }
+      &--text {
+         margin-bottom: 2rem;
+         p {
+            font-family: 400;
+            font-size: 1.8rem;
+            color: $text-color;
+            margin-bottom: 0.5rem;
+            &:last-child {
+               margin-bottom: 0;
+            }
+         }
+      }
+      &--input {
+         h5 {
+            font-size: 2.4rem;
+            font-weight: 400;
+            color: $danger;
+            margin-bottom: 0.5rem;
+         }
+         input {
+            width: 50%;
+            font-size: 1.8rem;
+            font-weight: 300;
+            padding: 1rem;
+            border-radius: 0.5rem;
+            outline: none;
+            border: 1px solid rgba($danger, 0.5);
+            &:focus {
+               border: 1px solid rgba($danger, 1);
+               border-color: $danger;
+            }
+         }
+      }
+   }
+}

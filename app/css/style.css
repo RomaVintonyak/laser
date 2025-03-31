@@ -250,7 +250,7 @@ body {
     color: #000000;
     margin: 0;
     padding: 0;
-    background-color: #ffffff;
+    background-color: rgba(0, 0, 0, 0.03);
     overflow-x: hidden;
 }
 
@@ -319,88 +319,124 @@ a:focus {
 }
 
 /*header*/
-/*test block*/
 .header {
-    width: 100%;
-    height: 8vh;
-    background-color: rgba(8, 68, 231, 0.4);
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    padding: 1rem 0;
 }
 
 .nav__menu {
-    width: 100%;
-    height: 100%;
     display: flex;
-    justify-content: space-between;
     align-items: center;
+    justify-content: space-between;
+    background-color: #ffffff;
+    border-radius: 1rem;
+    padding: 2rem 1rem;
 }
 
-.nav__menu--main {
+.brand a {
+    text-decoration: none;
+    font-size: 1.8rem;
+    color: #000000;
+    font-weight: 400;
+    transition: color 0.1s linear;
+}
+
+.brand a:hover {
+    color: #F46C68;
+    cursor: pointer;
+}
+
+.menu__social {
     list-style-type: none;
-    width: 50%;
-    height: 100%;
-    display: flex;
+    margin: 0;
+    padding: 0;
 }
 
-.nav__menu--main li {
-    margin-right: 2rem;
-    position: relative;
+.menu__social li {
+    margin-right: 0.5rem;
 }
 
-.nav__menu--main li:last-child {
+.menu__social li:last-child {
     margin-right: 0;
 }
 
-.nav__menu--main li::after {
-    content: "";
-    width: 0;
-    height: 3px;
-    background-color: black;
-    position: absolute;
-    bottom: -0.4rem;
-    left: 0;
-    transition: 0.3s ease-in-out;
-}
-
-.nav__menu--main li:hover::after {
-    width: 100%;
-}
-
-.nav__menu--main li a {
+.menu__social li a {
     text-decoration: none;
-    font-size: 2rem;
-    color: black;
-    font-weight: 600;
 }
 
-.nav__menu--social {
+.menu__social li a i {
+    font-size: 2.5rem;
+    color: #000000;
+    transition: color 0.1s linear;
+}
+
+.menu__social li a:hover {
+    cursor: pointer;
+}
+
+.menu__social li a:hover i {
+    color: #F46C68;
+}
+
+/*intro*/
+.intro__row {
+    background-color: #ffffff;
+    border-radius: 1rem;
+    padding: 2rem 1rem;
+}
+
+.intro__row--title {
+    margin-bottom: 0.5rem;
+}
+
+.intro__row--title h1 {
+    font-size: 3rem;
+    font-weight: 400;
+    color: #F46C68;
+}
+
+.intro__row--suptitle {
+    margin-bottom: 2rem;
+}
+
+.intro__row--suptitle h2 {
+    font-size: 2.4rem;
+    font-weight: 400;
+    color: #555;
+}
+
+.intro__row--text {
+    margin-bottom: 2rem;
+}
+
+.intro__row--text p {
+    font-family: 400;
+    font-size: 1.8rem;
+    color: #555;
+    margin-bottom: 0.5rem;
+}
+
+.intro__row--text p:last-child {
+    margin-bottom: 0;
+}
+
+.intro__row--input h5 {
+    font-size: 2.4rem;
+    font-weight: 400;
+    color: #F46C68;
+    margin-bottom: 0.5rem;
+}
+
+.intro__row--input input {
     width: 50%;
-    height: 100%;
-    display: flex;
-    list-style-type: none;
-    justify-content: end;
+    font-size: 1.8rem;
+    font-weight: 300;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    outline: none;
+    border: 1px solid rgba(244, 108, 104, 0.5);
 }
 
-.nav__menu--social li {
-    margin-left: 2rem;
-}
-
-.nav__menu--social li:first-child {
-    margin-left: 0;
-}
-
-.nav__menu--social li a {
-    text-decoration: none;
-}
-
-.nav__menu--social li a i {
-    color: red;
-    font-size: 2rem;
-    transition: color, linear, 0.3s;
-}
-
-.nav__menu--social li:hover a i {
-    color: black;
+.intro__row--input input:focus {
+    border: 1px solid #f46c68;
+    border-color: #F46C68;
 }
