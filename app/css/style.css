@@ -239,7 +239,6 @@ template {
 /*main style*/
 html {
     font-size: 10px;
-    overflow-x: hidden;
 }
 
 body {
@@ -636,13 +635,17 @@ a:focus {
 
 /*modal*/
 .modal {
-    position: absolute;
+    position: fixed;
     overflow-y: scroll;
     top: 0;
     left: 0;
     width: 100%;
     height: 100vh;
     z-index: 50;
+    transform: scale(0);
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s linear;
 }
 
 .modal__mask {
@@ -655,7 +658,7 @@ a:focus {
 }
 
 .modal__body {
-    width: 40%;
+    width: 25%;
     background-color: #ffffff;
     padding: 1rem;
     border-radius: 1rem;
@@ -666,8 +669,8 @@ a:focus {
 }
 
 .modal__body--close i {
-    font-size: 2.6rem;
-    transition: color 0.1s linear;
+    font-size: 2.8rem;
+    transition: color 0.2s linear;
 }
 
 .modal__body--close i:hover {
@@ -704,6 +707,13 @@ a:focus {
     font-size: 1.4rem;
     color: #000000;
     font-weight: 400;
+}
+
+.modal__open {
+    transform: scale(1);
+    visibility: visible;
+    opacity: 1;
+    transition: all 0.3s linear;
 }
 
 .modal__form--block {

@@ -29,7 +29,7 @@
         </div><!--/.brand-->
         <ul class="menu__social">
           <li>
-            <a href="https://www.instagram.com/laser.cut.power/?igsh=dGVramlpYmoxejJr#"><i class="fab fa-instagram"></i></a>
+            <a target="_blank" href="https://www.instagram.com/laser.cut.power/?igsh=dGVramlpYmoxejJr#"><i class="fab fa-instagram"></i></a>
           </li>
         </ul><!--/.social-->
       </nav><!--/.nav__menu-->
@@ -241,15 +241,6 @@
 
 
 
-
-
-
-
-
-
-
-
-
       </div><!--/.font__row-->
     </div><!--/.container-->
   </section><!--/.font-->
@@ -264,11 +255,11 @@
     </div><!--/.container-->
   </footer><!--/.footer-->
   <!--modal-->
-  <section class="modal">
+  <section class="modal" id="modal">
     <div class="modal__mask">
       <div class="modal__body">
-        <div class="modal__body--close _closeModal">
-          <i class="fas fa-times"></i>
+        <div class="modal__body--close">
+          <i id="closeModal" class="fas fa-times"></i>
         </div><!--/.close-->
         <div class="modal__body--title">
           <h3>
@@ -282,7 +273,7 @@
           <form action="#" method="post" id="modalForm" class="modal__form">
             <div class="modal__form--block">
               <label for="fontLine">Шрифт</label>
-              <input type="text" id="fontLine" name="fontLine">
+              <input type="text" id="fontLine" name="fontLine" value="" disabled>
             </div><!--/.block-->
             <div class="modal__form--block">
               <label for="materialBlock">Матеріал</label>
@@ -321,7 +312,7 @@
             <div class="modal__form--button">
               <button type="button" class="_btn button" id="calc">Замовити</button>
             </div><!--/.button-->
-            <div class="error__text">Введіть номер телефону</div>
+            <div class="error__text"></div>
           </form>
         </div><!--/.form-->
         <div class="modal__body--footer">
