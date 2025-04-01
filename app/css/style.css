@@ -394,6 +394,18 @@ a:focus {
     color: #F46C68;
 }
 
+@media (max-width: 991px) {
+    .intro__row--title h1 {
+        font-size: 2.5rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .intro__row--title h1 {
+        font-size: 2rem;
+    }
+}
+
 .intro__row--suptitle {
     margin-bottom: 2rem;
 }
@@ -402,6 +414,24 @@ a:focus {
     font-size: 2.4rem;
     font-weight: 400;
     color: #555;
+}
+
+@media (max-width: 991px) {
+    .intro__row--suptitle h2 {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .intro__row--suptitle h2 {
+        font-size: 1.9rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .intro__row--suptitle {
+        margin-bottom: 1rem;
+    }
 }
 
 .intro__row--text {
@@ -419,11 +449,35 @@ a:focus {
     margin-bottom: 0;
 }
 
+@media (max-width: 768px) {
+    .intro__row--text p {
+        font-size: 1.7rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .intro__row--text {
+        margin-bottom: 1rem;
+    }
+}
+
 .intro__row--input h5 {
     font-size: 2.4rem;
     font-weight: 400;
     color: #F46C68;
     margin-bottom: 0.5rem;
+}
+
+@media (max-width: 991px) {
+    .intro__row--input h5 {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .intro__row--input h5 {
+        font-size: 1.9rem;
+    }
 }
 
 .intro__row--input input {
@@ -439,4 +493,267 @@ a:focus {
 .intro__row--input input:focus {
     border: 1px solid #f46c68;
     border-color: #F46C68;
+}
+
+@media (max-width: 991px) {
+    .intro__row--input input {
+        width: 100%;
+    }
+}
+
+/*font*/
+.font__row {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.font__block {
+    width: 19%;
+    border: 1px solid #F46C68;
+    background-color: #ffffff;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    margin-bottom: 2rem;
+    transition: transform 0.2s linear, box-shadow 0.2s linear;
+}
+
+.font__block:last-child {
+    margin-bottom: 0;
+}
+
+.font__block:hover {
+    cursor: pointer;
+    transform: scale(1.05);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width: 1366px) {
+    .font__block {
+        width: 23%;
+    }
+}
+
+@media (max-width: 991px) {
+    .font__block {
+        width: 32%;
+    }
+}
+
+@media (max-width: 768px) {
+    .font__block {
+        width: 47%;
+    }
+}
+
+@media (max-width: 576px) {
+    .font__block {
+        width: 49%;
+    }
+}
+
+@media (max-width: 450px) {
+    .font__block {
+        width: 100%;
+    }
+}
+
+.font__preview {
+    word-break: break-all;
+    font-weight: 400;
+    font-size: 2.4rem;
+    margin-bottom: 1rem;
+    text-align: center;
+    line-height: 1.4;
+    background: radial-gradient(circle, #462523 0, #cb9b51 22%, #f6e27a 45%, #f6f2c0 50%, #f6e27a 55%, #cb9b51 78%, #462523 100%);
+    background-size: 200% 100%;
+    color: transparent;
+    -webkit-background-clip: text;
+    -webkit-animation: fontAnimation 4s infinite linear;
+    animation: fontAnimation 4s infinite linear;
+    -webkit-text-stroke: 0px white;
+}
+
+@media (max-width: 576px) {
+    .font__preview {
+        font-size: 2.2rem;
+    }
+}
+
+@-webkit-keyframes fontAnimation {
+    to {
+        background-position: -200% 0;
+    }
+}
+
+@keyframes fontAnimation {
+    to {
+        background-position: -200% 0;
+    }
+}
+
+/*footer*/
+.footer {
+    padding: 1rem 0;
+}
+
+.footer__row {
+    background-color: #ffffff;
+    border-radius: 1rem;
+    padding: 1.5rem 1rem;
+}
+
+.footer__row--copy {
+    text-align: center;
+    color: #000000;
+    font-weight: 400;
+    font-size: 1.7rem;
+}
+
+/*button*/
+.button {
+    border: none;
+    background: transparent;
+    font-size: 1.7rem;
+    font-weight: 400;
+    color: #555;
+    background-color: #F46C68;
+    padding: 1rem 1rem;
+    border-radius: 0.5rem;
+    transition: color 0.1s linear, background-color 0.1s linear;
+}
+
+.button:hover {
+    cursor: pointer;
+    background-color: #555;
+    color: #F46C68;
+}
+
+.button:active {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+/*modal*/
+.modal {
+    position: absolute;
+    overflow-y: scroll;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: 50;
+}
+
+.modal__mask {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal__body {
+    width: 40%;
+    background-color: #ffffff;
+    padding: 1rem;
+    border-radius: 1rem;
+}
+
+.modal__body--close {
+    text-align: right;
+}
+
+.modal__body--close i {
+    font-size: 2.6rem;
+    transition: color 0.1s linear;
+}
+
+.modal__body--close i:hover {
+    cursor: pointer;
+    color: #F46C68;
+}
+
+.modal__body--close i:active {
+    transform: scale(0.98);
+}
+
+.modal__body--title {
+    text-align: center;
+    margin-top: 0.5rem;
+}
+
+.modal__body--title h3 {
+    margin-bottom: 1rem;
+    font-size: 1.9rem;
+    font-weight: 400;
+    color: #F46C68;
+}
+
+.modal__body--form {
+    margin-top: 0.5rem;
+    width: 100%;
+}
+
+.modal__body--footer {
+    text-align: center;
+}
+
+.modal__body--footer p {
+    font-size: 1.4rem;
+    color: #000000;
+    font-weight: 400;
+}
+
+.modal__form--block {
+    margin-bottom: 1rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.modal__form--block label {
+    font-size: 1.5rem;
+    font-weight: 400;
+    margin-bottom: 0.5rem;
+}
+
+.modal__form--block input {
+    padding: 0.5rem 0 0.5rem 1rem;
+    border: 1px solid rgba(244, 108, 104, 0.5);
+    border-radius: 0.5rem;
+    font-size: 1.5rem;
+    font-weight: 500;
+    outline: none;
+}
+
+.modal__form--block input:focus {
+    border: 1px solid #f46c68;
+    border-color: #F46C68;
+}
+
+.modal__form--block select {
+    padding: 0.5rem 0 0.5rem 1rem;
+    border: 1px solid rgba(244, 108, 104, 0.5);
+    border-radius: 0.5rem;
+    font-size: 1.5rem;
+    font-weight: 500;
+    outline: none;
+}
+
+.modal__form--block select:focus {
+    border: 1px solid #f46c68;
+    border-color: #F46C68;
+}
+
+.modal__form--button {
+    text-align: center;
+}
+
+.error__text {
+    margin: 0.5rem 0;
+    font-size: 1.7rem;
+    font-weight: 400;
+    color: #F46C68;
+    height: 2rem;
 }

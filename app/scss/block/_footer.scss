@@ -1,0 +1,17 @@
+//*mixins*//
+@import "./mixin.scss";
+
+.footer {
+   padding: 1rem 0;
+   &__row {
+      background-color: $white;
+      border-radius: 1rem;
+      padding: 1.5rem 1rem;
+      &--copy {
+         text-align: center;
+         color: $black;
+         font-weight: 400;
+         font-size: 1.7rem;
+      }
+   }
+}

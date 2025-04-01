@@ -12,6 +12,12 @@
             font-size: 3rem;
             font-weight: 400;
             color: $danger;
+            @include tablet{
+               font-size: 2.5rem;
+            }
+            @include mobile{
+               font-size: 2rem;
+            }
          }
       }
       &--suptitle {
@@ -20,6 +26,15 @@
             font-size: 2.4rem;
             font-weight: 400;
             color: $text-color;
+            @include tablet{
+               font-size: 2rem;
+            }
+            @include mobile{
+               font-size: 1.9rem;
+            }
+         }
+         @include mobile{
+            margin-bottom: 1rem;
          }
       }
       &--text {
@@ -32,6 +47,12 @@
             &:last-child {
                margin-bottom: 0;
             }
+            @include mobile{
+               font-size: 1.7rem;
+            }
+         }
+         @include mobile{
+            margin-bottom: 1rem;
          }
       }
       &--input {
@@ -40,6 +61,12 @@
             font-weight: 400;
             color: $danger;
             margin-bottom: 0.5rem;
+            @include tablet{
+               font-size: 2rem;
+            }
+            @include mobile{
+               font-size: 1.9rem;
+            }
          }
          input {
             width: 50%;
@@ -52,6 +79,9 @@
             &:focus {
                border: 1px solid rgba($danger, 1);
                border-color: $danger;
+            }
+            @include tablet{
+               width: 100%;
             }
          }
       }

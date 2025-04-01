@@ -1,0 +1,23 @@
+//*mixins*//
+@import "./mixin.scss";
+
+
+.button {
+   border: none;
+   background: transparent;
+   font-size: 1.7rem;
+   font-weight: 400;
+   color: $text-color;
+   background-color: $danger;
+   padding: 1rem 1rem;
+   border-radius: 0.5rem;
+   transition: color 0.1s linear, background-color 0.1s linear;
+   &:hover {
+      cursor: pointer;
+      background-color: $text-color;
+      color: $danger;
+   }
+   &:active {
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+   }
+}

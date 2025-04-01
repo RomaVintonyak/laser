@@ -1,0 +1,74 @@
+//*mixins*//
+@import "./mixin.scss";
+
+.font {
+   &__row {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      flex-wrap: wrap;
+   }
+}
+.font__block {
+   width: 19%;
+   border: 1px solid $danger;
+   background-color: $white;
+   padding: 1rem;
+   border-radius: 0.5rem;
+   margin-bottom: 2rem;
+   transition: transform 0.2s linear, box-shadow 0.2s linear;
+   &:last-child {
+      margin-bottom: 0;
+   }
+   &:hover {
+      cursor: pointer;
+      transform: scale(1.05);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+   }
+   @include notebook {
+      width: 23%;
+   }
+   @include tablet {
+      width: 32%;
+   }
+   @include mobile {
+      width: 47%;
+   }
+   @include mobile-sm {
+      width: 49%;
+   }
+   @include mobile-xsm {
+      width: 100%;
+   }
+}
+.font__preview {
+   word-break: break-all;
+   font-weight: 400;
+   font-size: 2.4rem;
+   margin-bottom: 1rem;
+   text-align: center;
+   line-height: 1.4;
+   background: radial-gradient(
+      circle,
+      #462523 0,
+      #cb9b51 22%,
+      #f6e27a 45%,
+      #f6f2c0 50%,
+      #f6e27a 55%,
+      #cb9b51 78%,
+      #462523 100%
+   );
+   background-size: 200% 100%;
+   color: transparent;
+   -webkit-background-clip: text;
+   animation: fontAnimation 4s infinite linear;
+   -webkit-text-stroke: 0px white;
+   @include mobile-sm {
+      font-size: 2.2rem;
+   }
+}
+@keyframes fontAnimation {
+   to {
+      background-position: -200% 0;
+   }
+}
