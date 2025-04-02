@@ -12,7 +12,7 @@ jQuery(document).ready(function () {
     $("#modal").addClass("modal__open");
     $("body").css({ "overflow": "hidden" });
     /*write input*/
-    $("#fontLine").val("Надпис:" + fontPreview + "Шрифт: " + fontName);
+    $("#fontLine").val(/*"Надпис:" + fontPreview +*/ "Шрифт: " + fontName);
     $("._modalPreview").text(fontPreview);
   });
   /*modal close*/
@@ -23,13 +23,16 @@ jQuery(document).ready(function () {
     $("._modalPreview").text("");
   });
   /*modal mask close*/
-  $(".modal__mask").on("click", function () {
-    $("#modal").removeClass("modal__open");
-    $("body").removeAttr("style");
-    $("#fontLine").val("");
-    $("._modalPreview").text("");
-  });
-  $(".modal__body").on("click", function (event) {
-    event.stopPropagation();
-  });
+  var wWidth = $(window).width();
+  if (wWidth <= 768) {
+    $(".modal__mask").on("click", function () {
+      $("#modal").removeClass("modal__open");
+      $("body").removeAttr("style");
+      $("#fontLine").val("");
+      $("._modalPreview").text("");
+    });
+    $(".modal__body").on("click", function (event) {
+      event.stopPropagation();
+    });
+  }
 });

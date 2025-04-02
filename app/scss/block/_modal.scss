@@ -38,6 +38,9 @@
             &:active {
                transform: scale(0.98);
             }
+            @include mobile-sm{
+               font-size: 2.2rem;
+            }
          }
       }
       &--title {
@@ -48,6 +51,16 @@
             font-size: 1.9rem;
             font-weight: 400;
             color: $danger;
+            @include mobile-sm{
+               margin-bottom: 0.5rem;
+               font-size: 1.8rem;
+            }
+         }
+         .font__preview {
+            @include mobile-sm{
+               font-size: 2rem;
+               margin-bottom: 0.5rem;
+            }
          }
       }
       &--form {
@@ -60,7 +73,22 @@
             font-size: 1.4rem;
             color: $black;
             font-weight: 400;
+            @include mobile-sm{
+               font-size: 1.2rem;
+            }
          }
+      }
+      @include notebook{
+         width: 45%;
+      }
+      @include tablet{
+         width: 55%;
+      }
+      @include mobile{
+         width: 80%;
+      }
+      @include mobile-sm{
+         width: 95%;
       }
    }
    &__open{
@@ -104,6 +132,9 @@
             border-color: $danger;
          }
       }
+      @include mobile-sm{
+         margin-bottom: 0.5rem;
+      }
    }
    &--button{
       text-align: center;
@@ -115,4 +146,8 @@
    font-weight: 400;
    color: $danger;
    height: 2rem;
+   @include mobile-sm{
+      font-size: 1.4rem;
+      height: 1.5rem;
+   }
 }
